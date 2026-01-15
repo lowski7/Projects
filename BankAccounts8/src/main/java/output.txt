@@ -1,0 +1,583 @@
+		Bank Accounts in the Database
+
+Last Name           First Name            Social Security #           Account Number              Account Type                 Balance     Maturity Date
+________________________________________________________________________________________________________________________________________________________________
+Doe                 John                  123445678                   123456                      Savings               $         200.55               
+Beam                Jim                   234556789                   567890                      Checking              $        1234.56               
+Eyre                Jane                  345667890                   987654                      Savings               $           2.33               
+Sawyer              Tom                   456778901                   234567                      CD                    $         500.00     01/22/2025
+Finn                Huck                  567889012                   345678                      Checking              $         123.98               
+Doe                 John                  123445678                   222222                      CD                    $        5000.00     01/12/2026
+Doe                 John                  123445678                   333333                      Checking              $         999.99               
+Finn                Huck                  567889012                   654321                      Savings               $         543.66               
+Sprat               Jack                  678990123                   785609                      Savings               $           0.00               
+Doe                 Jane                  456789012                   389765                      Checking              $         888.56               
+Doe                 Jane                  456789012                   123123                      Savings               $         987.89               
+chalamet            Timothy               453209498                   789889                      CD                    $         666.89     03/01/2025
+
+Total Balance in Checking Accounts: 3247.09
+Total Balance in Savings Accounts: 1734.43
+Total Balance in CD Accounts: 6166.89
+Total Balance in All Accounts: 11148.41
+
+
+
+Transaction Requested: balance inquiry
+Account Number: 123456
+Date of transaction: 11/25/2025
+Account Type: Savings
+Name of Owner: John Doe
+Balance: $200.55
+
+
+Transaction Requested: balance inquiry
+Account Number: 123456
+Date of transaction: 11/25/2025
+Account Type: Savings
+Name of Owner: John Doe
+Balance: $200.55
+
+
+
+Transaction Requested: balance inquiry
+Account Number: 345213
+Date of transaction: 11/25/2025
+Account Type: null
+Name of Owner:  
+Error in input, Account number 345213 Does not exist
+Balance: $0.00
+
+
+Transaction Requested: balance inquiry
+Account Number: 345213
+Date of transaction: 11/25/2025
+Error in input, Account number 345213 Does not exist
+
+
+
+
+Transaction Requested: Deposit
+Account Number: 222222
+Date of transaction: 11/25/2025
+Amount: $654.32
+CD Term: 24 months
+Account Type: CD
+Name of Owner: John Doe
+Error, maturity date not reached, Transaction made before  01/12/2026
+ Account type: CD
+
+
+
+
+
+Transaction Requested: Deposit
+Account Number: 567890
+Date of transaction: 11/25/2025
+Amount: $411.54
+Account Type: Checking
+Name of Owner: Jim Beam
+old Balance: $1234.56
+new Balance: $1646.10
+
+
+
+
+
+Transaction Requested: Deposit
+Account Number: 123456
+Date of transaction: 11/25/2025
+Account Type: Savings
+Name of Owner: John Doe
+Error in input, Cannot deposit a negative amount
+ Attempted Deposit Amount 
+
+
+
+
+
+Transaction Requested: Deposit
+Account Number: 984563
+Date of transaction: 11/25/2025
+Amount: $543.21
+Error in input, Account number 984563 Does not exist
+
+
+
+
+
+Transaction Requested: Deposit
+Account Number: 234567
+Date of transaction: 11/25/2025
+Amount: $643.22
+CD Term: 24 months
+Account Type: CD
+Name of Owner: Tom Sawyer
+old Balance: $500.00
+new Balance: $1143.22
+Maturity Date: 11/25/2027
+
+
+
+
+Transaction Requested: Withdraw
+Account Number: 654321
+Date of transaction: 11/25/2025
+Amount: $600.00
+Account Type: Savings
+Name of Owner: Huck Finn
+Error in input, insufficient funds, Cannot withdraw more than 543.66
+
+
+
+
+
+Transaction Requested: Withdraw
+Account Number: 234567
+Date of transaction: 11/25/2025
+Amount: $100.00
+CD Term: 12 months
+Account Type: CD
+Name of Owner: Tom Sawyer
+Error, maturity date not reached, Transaction made before  01/22/2027
+ Account type: CD
+
+
+
+
+
+Transaction Requested: Withdraw
+Account Number: 222222
+Date of transaction: 11/25/2025
+Amount: $500.00
+Account Type: CD
+Name of Owner: John Doe
+Error, maturity date not reached, Transaction made before  01/12/2026
+ Account type: CD
+
+
+
+
+
+Transaction Requested: Withdraw
+Account Number: 333333
+Date of transaction: 11/25/2025
+Amount: $435.00
+Account Type: Checking
+Name of Owner: John Doe
+old Balance: $999.99
+new Balance: $564.99
+
+
+
+
+
+Transaction Requested: Withdraw
+Account Number: 456432
+Date of transaction: 11/25/2025
+Amount: $234.23
+Error in input, Account number 456432 Does not exist
+
+
+
+
+Transaction Requested: Close Account
+Account Number: 567890
+Date of transaction: 11/25/2025
+Account Type: Checking
+Name of Owner: Jim Beam
+Balance: $1646.10
+closed
+
+
+
+
+Transaction Requested: Clear Check
+balance: 1646.10
+Check date: 3/23/2026
+Check Amount: $190.87
+Account Type: Checking
+Name of Owner: Jim Beam
+Error in input: Post Dated check. 
+ Unable to clear check due to it being a future date
+Account number: 567890
+
+
+
+
+Transaction Requested: reopen Account
+Account Number: 567890
+Date of transaction: 11/25/2025
+Account Type: Checking
+Name of Owner: Jim Beam
+Error, Account open: unable to open an already open account.
+Account owner: Jim Beam
+
+
+
+Transaction Requested: Clear Check
+balance: 1646.10
+Check date: 3/23/2026
+Check Amount: $190.87
+Account Type: Checking
+Name of Owner: Jim Beam
+Error in input: Post Dated check. 
+ Unable to clear check due to it being a future date
+Account number: 567890
+
+
+
+
+
+Transaction Requested: Clear Check
+balance: 1646.10
+Check date: 2/15/2025
+Check Amount: $1000.00
+Account Type: Checking
+Name of Owner: Jim Beam
+ Check too old 
+ Unable to clear check due to it being past 6 months
+Account number 567890
+
+
+
+
+
+Transaction Requested: Clear Check
+balance: 123.98
+Check date: 1/10/2025
+Check Amount: $10000.00
+Account Type: Checking
+Name of Owner: Huck Finn
+ Check too old 
+ Unable to clear check due to it being past 6 months
+Account number 345678
+
+
+
+
+
+Transaction Requested: Clear Check
+balance: 1646.10
+Check date: 6/23/2023
+Check Amount: $5000.50
+Account Type: Checking
+Name of Owner: Jim Beam
+ Check too old 
+ Unable to clear check due to it being past 6 months
+Account number 567890
+
+
+
+
+
+Transaction Requested: Clear Check
+balance: 0.00
+Check date: 8/25/2030
+Check Amount: $102.21
+ account number: 993456 does not exist
+
+
+
+
+
+Transaction Requested: Clear Check
+balance: 564.99
+Check date: 2/23/2025
+Check Amount: $-98.37
+Account Type: Checking
+Name of Owner: John Doe
+Error in input, Check Amount can not be negative 
+ Account number: 333333
+
+
+
+
+
+
+Transaction Requested: New account
+Account Number: 333333
+Date of transaction: 11/25/2025
+Error in input, Account number 333333 already Exists. 
+
+
+
+
+
+Transaction Requested: New account
+Account Number: 666666
+Date of transaction: 11/25/2025
+Account opened
+Name of Owner: Michael Jordan
+Number of Accounts in database: 13
+
+
+
+Transaction Requested: New account
+Account Number: 777777
+Date of transaction: 11/25/2025
+Account opened
+Name of Owner: Aubrey graham
+Number of Accounts in database: 14
+
+
+
+Transaction Requested: New account
+Account Number: 888888
+Date of transaction: 11/25/2025
+Account opened
+Name of Owner: super sonics
+Number of Accounts in database: 15
+
+
+
+Transaction Requested: New account
+Account Number: 333334
+Date of transaction: 11/25/2025
+Account opened
+Name of Owner: Jude Belling
+Number of Accounts in database: 16
+
+
+
+Transaction Requested: New account
+Account Number: 993456
+Date of transaction: 11/25/2025
+Account opened
+Name of Owner: Stephen curry
+Number of Accounts in database: 17
+
+
+
+Last Name           First Name            Social Security #           Account Number              Account Type          Balance
+______________________________________________________________________________________________________________________________________________________
+Finn                Huck                  567889012                   345678                      Checking              $         123.98               
+Finn                Huck                  567889012                   654321                      Savings               $         543.66               
+
+
+
+Last Name           First Name            Social Security #           Account Number              Account Type          Balance
+______________________________________________________________________________________________________________________________________________________
+Doe                 John                  123445678                   123456                      Savings               $         200.55               
+Doe                 John                  123445678                   222222                      CD                    $        5000.00     01/12/2026
+Doe                 John                  123445678                   333333                      Checking              $         564.99               
+
+
+Transaction requested: Account Info.
+Social Security number: 344545747
+Error in input, incorrect Social Security # entered.
+
+
+Transaction Requested: Delete Account
+Account Number: 785609
+Date of transaction: 11/25/2025
+account Successfully deleted
+Name of Owner: Jack Sprat
+Number of Accounts in database: 16
+
+
+
+Transaction Requested: Delete Account
+Account Number: 424225
+Date of transaction: 11/25/2025
+ account number: 424225 does not exist
+
+
+
+
+Transaction Requested: Delete Account
+Account Number: 389765
+Date of transaction: 11/25/2025
+Error in input: Unable to delete account 389765 due to funds being available.
+ please clear your account first.
+
+
+
+Transaction Requested: Withdraw
+Account Number: 389765
+Date of transaction: 11/25/2025
+Amount: $887.06
+Account Type: Checking
+Name of Owner: Jane Doe
+old Balance: $888.56
+new Balance: $1.50
+
+
+
+
+
+
+Transaction Requested: Delete Account
+Account Number: 389765
+Date of transaction: 11/25/2025
+Error in input: Unable to delete account 389765 due to funds being available.
+ please clear your account first.
+
+
+
+Transaction Requested: Withdraw
+Account Number: 666666
+Date of transaction: 11/25/2025
+Amount: $345.65
+Account Type: Checking
+Name of Owner: Michael Jordan
+old Balance: $698.64
+new Balance: $352.99
+
+
+
+
+
+
+Transaction Requested: Deposit
+Account Number: 666666
+Date of transaction: 11/25/2025
+Amount: $1300.54
+Account Type: Checking
+Name of Owner: Michael Jordan
+old Balance: $352.99
+new Balance: $1653.53
+
+
+
+
+Transaction Requested: balance inquiry
+Account Number: 666666
+Date of transaction: 11/25/2025
+Account Type: Checking
+Name of Owner: Michael Jordan
+Balance: $1653.53
+
+
+Transaction Requested: balance inquiry
+Account Number: 666666
+Date of transaction: 11/25/2025
+Account Type: Checking
+Name of Owner: Michael Jordan
+Balance: $1653.53
+
+
+
+
+Transaction Requested: Deposit
+Account Number: 888888
+Date of transaction: 11/25/2025
+Amount: $1200.00
+CD Term: 24 months
+Account Type: CD
+Name of Owner: super sonics
+old Balance: $5002.23
+new Balance: $6202.23
+Maturity Date: 11/25/2027
+
+
+
+
+Transaction requested: Account info + history
+
+Last Name           First Name          Social Security #   Account Number      Account Type        Balance             
+_______________________________________________________________________________________
+Beam                Jim                   234556789                   567890                      Checking              $        1646.10               
+*************** Transactions *************
+Date                Transaction Type    Transaction Amount  Transaction Status  Balance             Reason              
+
+11/25/2025          New account         0.00                Successful          0.00                null                
+
+
+11/25/2025          Deposit             411.54              Successful          1646.10             null                
+
+
+11/25/2025          Close Account       0.00                Successful          1646.10             null                
+
+
+11/25/2025          reopen Account      0.00                Failed              1646.10             Error, Account open: unable to
+
+
+
+
+
+Transaction requested: Account info + history
+
+Last Name           First Name          Social Security #   Account Number      Account Type        Balance             
+_______________________________________________________________________________________
+Jordan              Michael               235660636                   666666                      Checking              $        1653.53               
+*************** Transactions *************
+Date                Transaction Type    Transaction Amount  Transaction Status  Balance             Reason              
+
+11/25/2025          New account         0.00                Successful          0.00                null                
+
+
+11/25/2025          Withdraw            345.65              Successful          352.99              null                
+
+
+11/25/2025          Deposit             1300.54             Successful          1653.53             null                
+
+
+11/25/2025          balance inquiry     0.00                Successful          1653.53             null                
+
+
+
+
+Transaction Requested: Close Account
+Account Number: 567890
+Date of transaction: 11/25/2025
+Account Type: Checking
+Name of Owner: Jim Beam
+Balance: $1646.10
+closed
+
+
+Transaction Requested: Close Account
+Account Number: 567890
+Date of transaction: 11/25/2025
+Account Type: Checking
+Name of Owner: Jim Beam
+Balance: $1646.10
+closed
+
+
+
+Transaction Requested: reopen Account
+Account Number: 567890
+Date of transaction: 11/25/2025
+Account Type: Checking
+Name of Owner: Jim Beam
+Error, Account open: unable to open an already open account.
+Account owner: Jim Beam
+
+
+
+
+Error: f is an invalid selection -  try again
+
+
+
+
+Error: v is an invalid selection -  try again
+
+		Bank Accounts in the Database
+
+Last Name           First Name            Social Security #           Account Number              Account Type                 Balance     Maturity Date
+________________________________________________________________________________________________________________________________________________________________
+Doe                 John                  123445678                   123456                      Savings               $         200.55               
+Beam                Jim                   234556789                   567890                      Checking              $        1646.10               
+Eyre                Jane                  345667890                   987654                      Savings               $           2.33               
+Sawyer              Tom                   456778901                   234567                      CD                    $        1143.22     01/22/2027
+Finn                Huck                  567889012                   345678                      Checking              $         123.98               
+Doe                 John                  123445678                   222222                      CD                    $        5000.00     01/12/2026
+Doe                 John                  123445678                   333333                      Checking              $         564.99               
+Finn                Huck                  567889012                   654321                      Savings               $         543.66               
+curry               Stephen               267459012                   993456                      Savings               $        3000.00               
+Doe                 Jane                  456789012                   389765                      Checking              $           1.50               
+Doe                 Jane                  456789012                   123123                      Savings               $         987.89               
+chalamet            Timothy               453209498                   789889                      CD                    $         666.89     03/01/2025
+Jordan              Michael               235660636                   666666                      Checking              $        1653.53               
+graham              Aubrey                098247447                   777777                      Savings               $         543.64               
+sonics              super                 254567923                   888888                      CD                    $        6202.23     03/22/2027
+Belling             Jude                  232323432                   333334                      Checking              $         400.00               
+
+Total Balance in Checking Accounts: 2678.02
+Total Balance in Savings Accounts: 5278.07
+Total Balance in CD Accounts: 13012.34
+Total Balance in All Accounts: 20968.43
+
+
