@@ -1,4 +1,4 @@
-   //Sajid ELsaeyed 3130  Wordle app, eliminating letters as the guesses come in
+ 
 
 // I am using the List<String> in wordfinder to iterate and randomly pick a a 5 letter word from
 //a file that contains all the 5 letter english words
